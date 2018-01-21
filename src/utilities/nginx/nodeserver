@@ -1,0 +1,20 @@
+upstream nodeApp1 {
+  server localhost:3000;
+  ## For Docker containers and load balancing
+  # server node2:3000 weight=10 max_fails=3 fail_timeout=30s;
+  # server node3:3000 weight=10 max_fails=3 fail_timeout=30s;
+}
+server {
+  listen 80;
+  server_name nodeApp1.domain.com;
+  access_log /var/log/nginx/nodeApp1.domain.com.log;
+
+  location / {
+    proxy_pass http://nodeApp1;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection 'upgrade';
+    proxy_set_header Host $host;
+    proxy_cache_bypass $http_upgrade;
+  }
+}
