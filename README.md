@@ -10,6 +10,7 @@
 * NVM + Nodejs LTS
 * Docker (latest)
 * docker-compose (v1.18.0)
+* Nginx
 
 ## Usage
 
