@@ -1,6 +1,8 @@
 #!/bin/bash
 
-./node.sh
-./docker.sh
-./docker-compose.sh
-./nginx.sh
+DIR="$(dirname "$0")"
+
+$DIR/node.sh
+$DIR/docker.sh
+$DIR/docker-compose.sh
+$DIR/nginx.sh
