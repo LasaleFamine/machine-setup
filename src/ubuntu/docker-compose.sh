@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-DOCKER_COMPOSE_VERSION="1.18.0"
+DOCKER_COMPOSE_VERSION="1.21.2"
 
 echo "Installing docker-compose $DOCKER_COMPOSE_VERSION... ⚙️"
 echo "If you want you can change it from the docker-compose.sh file ℹ️"
