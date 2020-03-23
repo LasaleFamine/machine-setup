@@ -5,11 +5,11 @@
 
 ## What's included
 
-### OS: Ubuntu (16.04 LTS tested)
+### OS: Ubuntu (16.04 and 18.04 LTS tested)
 
 * NVM + Nodejs LTS
 * Docker (latest)
-* docker-compose (v1.18.0)
+* docker-compose (v1.21.2)
 * Nginx
 
 ## Usage
